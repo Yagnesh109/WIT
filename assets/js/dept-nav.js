@@ -48,6 +48,7 @@ function buildSidebarMarkup(title) {
     <div class="dept-sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
     <button class="dept-sidebar-mobile-btn" id="deptNavToggle" type="button" aria-label="Open department menu" aria-expanded="false" aria-controls="deptSidebar">
       <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <span>Menu</span>
     </button>
   `;
 }

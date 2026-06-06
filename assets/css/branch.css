@@ -295,17 +295,32 @@ body.dept-sidebar-collapsed .dept-sidebar__link {
 .dept-sidebar-mobile-btn {
     display: none;
     position: fixed;
-    left: 14px;
-    bottom: 22px;
-    z-index: 96;
-    width: 52px;
-    height: 52px;
-    border-radius: 16px;
+    right: 20px;
+    bottom: 24px;
+    z-index: 1000;
+    height: 48px;
+    padding: 0 20px;
+    gap: 10px;
+    border-radius: 999px;
     color: #ffffff;
     background: linear-gradient(135deg, var(--dept-primary), var(--dept-secondary));
-    box-shadow: 0 10px 28px var(--dept-glow);
-    border: 0;
-    font-size: 1.15rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dept-sidebar-mobile-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 32px var(--dept-glow);
+}
+
+.dept-sidebar-mobile-btn i {
+    font-size: 1.1rem;
 }
 
 .dept-page .main-content {
@@ -1182,8 +1197,9 @@ body.dept-sidebar-collapsed .dept-sidebar__link {
     }
 
     .dept-sidebar-mobile-btn {
-        display: grid;
-        place-items: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .vm-cards-container {
