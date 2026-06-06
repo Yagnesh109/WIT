@@ -1167,11 +1167,61 @@ body.dept-sidebar-collapsed .dept-sidebar__link {
     }
 
     .dept-page .dept-sidebar-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .dept-page .dept-sidebar-toggle span {
         display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .dept-page .dept-sidebar-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .dept-page .dept-sidebar-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .dept-page .dept-sidebar-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .dept-page .dept-nav-links {
         display: none;
+    }
+
+    /* Fix for mobile menu toggle on department pages */
+    .dept-page .dept-nav-links.open {
+        display: grid !important;
+        position: fixed;
+        top: 104px;
+        left: 12px;
+        right: 12px;
+        background: rgba(10, 22, 40, 0.95);
+        backdrop-filter: blur(24px);
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
     }
 
     .dept-page .site-header--dept .navbar {
