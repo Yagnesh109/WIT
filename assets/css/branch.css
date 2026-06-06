@@ -1186,7 +1186,8 @@ body.dept-sidebar-collapsed .dept-sidebar__link {
         display: block;
         width: 24px;
         height: 2px;
-        background-color: #ffffff;
+        background-color: #ffffff !important;
+        margin: 0 !important;
         border-radius: 2px;
         transition: all 0.3s ease;
     }
