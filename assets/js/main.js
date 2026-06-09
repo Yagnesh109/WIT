@@ -229,7 +229,7 @@ function setupAnnouncements() {
 }
 
 function typeHeroTitle() {
-  const kicker = "S. A. P. D. Jain Pathshala's";
+  const kicker = "S. A. P. D. Jain Pathashala's";
   const title = "Walchand Institute of Technology, Solapur";
   const subtitle = "An Autonomous Institute";
   const caret = '<span class="caret" aria-hidden="true"></span>';
